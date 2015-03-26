@@ -189,19 +189,29 @@ a img {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Pancetta Serif";
+    font-family: "Pancetta Serif", Georgia, "Times New Roman", Times, serif;
     font-weight: 300;
     color: #333;
 }
 
-h2{
+h2 {
     font-family: "Pancetta", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
     font-size: 18pt;
     color: white;
-    text-transform: uppercase;
 }
 
-.textdivider h1 {
+h3 {
+    font-size: 36px
+}
+
+h4 {
+    font-size: 24px
+}
+h5 {
+    font-size: 18px
+}
+.textdivider h2 {
     font-family: "Pancetta", Helvetica, Arial, sans-serif;
     color: white;
     font-size: 40px;
@@ -320,10 +330,8 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/header_bg.jpg) no-repeat center top;
 	margin-top: 90px;
 	text-align:center;
-	background-attachment: relative;
 	background-position: center center;
 	min-height: 650px;
 	width: 100%;
@@ -434,30 +442,23 @@ a:after {
     width: 100%;
     display: table;
     max-height: 450px;
-    border-bottom: 2px solid #E6EAED;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     /*padding-top: 30px;
-    padding-bottom: 70px;*/
+    padding-bottom: 70px;
+    border-bottom: 2px solid #E6EAED;*/
     margin-top: 45px;
-
-
     background-position: center center;
-
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
-    background-attachment: relative;
-    
     text-align: center;
 }
 
@@ -471,21 +472,12 @@ a:after {
 
 /* Section Dividers Backgrounds */
 
-.divider1 {
-	background-image: url('../img/bg/divider1.jpg')
-}
-
 .divider2 {
 	background-image: url('../img/bg/divider2.png')
 }
 
 .divider3 {
 	background-image: url('../img/bg/divider3.jpg');
-	margin-top: 0px;
-}
-
-.divider4 {
-	background-image: url('../img/bg/divider4.jpg')
 }
 
 .divider6 {
@@ -570,7 +562,7 @@ a:after {
 .grid figcaption h5 {
     font-family: "Pancetta";
 	margin: 0;
-	padding-top: 0px;
+	padding-top: 0;
 	padding-left: 20px;
 	padding-bottom: 5px;
     color: #532515;
@@ -730,8 +722,8 @@ a:after {
 #portfolio {
     padding: 0;
     min-height: 600px;
-    margin-bottom: 50px;
 }
+
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
@@ -757,7 +749,7 @@ a:after {
 	}
 }
 
-.trigger h4 {
+.trigger h5 {
     font-family: 'Open Sans';
     font-weight: bold;
 }
@@ -1092,11 +1084,9 @@ section {
 }
 
 #carousel {
-    font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif !important;
-}
 
-section h3{
-    font-style: normal !important;
+    font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif !important;
+
 }
 
 .quote {
