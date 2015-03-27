@@ -418,7 +418,7 @@ a:after {
 	text-align: center;
 }
 
-#footerwrap h4 {
+#footerwrap h5 {
 	color: white;
     font-family: "Open Sans", Helvetica, Arial, sans-serif
 }
@@ -1138,18 +1138,28 @@ i {
 /*SCROLL TO TOP ARROW*/
 
 .uparrow {
-    background: url('../img/uparrow.png');
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
     position: fixed;
     bottom: 30px;
     left:30px;
-    display:none;
-}
-
-.uparrow:hover {
-    opacity: 0.7;
+    width: 40px;
+    height: 40px;
+    margin-top: -23px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #FFF;
+    text-decoration: none;
+    text-shadow: 0px 0px 2px #000;
+    text-align: center;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+    box-sizing: content-box;
+    border: 3px solid #FFF;
+    border-radius: 23px;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    transform: rotate(-90deg) scale(1) skew(0deg) translate(0px)
 }
 
 /*END OF ARROW*/
