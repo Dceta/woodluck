@@ -26,7 +26,7 @@ $('.navbar-nav a').click(function() {
 });
 $('#myTab a').click(function (e) {
     e.preventDefault();
-    $(this).tab('show')
+    $(this).tab('show');
 });
 
 $(document).ready(function () {
