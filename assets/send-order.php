@@ -1,5 +1,7 @@
 <?php
 
+    require_once "Mail.php";
+
     $name = $_POST["client-name"];
     $phone = $_POST["phone-num"];
 
@@ -35,10 +37,6 @@
  
     mail($to, $subject, $message, $headers);
     echo "Мы вам скоро перезвоним.";*/
-
-
-
-
 
 
 ?>
