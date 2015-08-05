@@ -5,7 +5,7 @@ $(document).ready( function() {
 
     $('#myCarousel').on('click', '.nav a', function() {
         clickEvent = true;
-        $('.nav li').removeClass('active');
+        $('#myspace .nav li').removeClass('active');
         $(this).parent().addClass('active');
     }).on('slid.bs.carousel', function(e) {
             if(!clickEvent) {
@@ -55,11 +55,11 @@ $(document).ready(function () {
 
 
 /* affix the navbar after scroll below header */
-$('#nav').affix({
+/*$('#nav').affix({
     offset: {
         top: $('header').height()+$('#nav').height()
     }
-});
+});*/
 
 /* highlight the top nav as scrolling occurs */
 $('body').scrollspy({ target: '#nav' });
