@@ -119,12 +119,12 @@
                                         <input type="text" class="form-control" id="name" name="name" required="required" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">
+                                        <label for="phone">
                                             Телефон</label>
                                         <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span>
                                 </span>
-                                            <input type="email" class="form-control" id="email" name="email" required="required" /></div>
+                                            <input type="text" class="form-control" id="phone" name="phone" required="required" /></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -178,7 +178,7 @@
     </div>
     <div class="hidden-xs" id="myspace">
         <div class="container">
-            <ul class="container nav nav-pills nav-justified">
+            <ul class="container nav nav-pills nav-justified carousel-indicators ">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#" title="Мебель"><span>Мебель</span></a></li>
                 <li data-target="#myCarousel" data-slide-to="1"><a href="#" title="Лестницы"><span>Лестницы</span></a></li>
                 <li data-target="#myCarousel" data-slide-to="2"><a href="#" title="Окна"><span>Окна</span></a></li>
@@ -305,17 +305,22 @@
 
 <!-- container -->
 <!-- ==== GREYWRAP ==== -->
-<div id="clients" class="greywrap wow fadeIn">
+<div id="clients" class="greywrap wow fadeIn textdivider">
     <div class="transparent">
         <div class="row wow fadeIn">
             <div class="container">
-                <div class="col-lg-6 callout ">
-
-                    <h3>Для дома и офиса</h3><!--Для частных клиентов-->
-                    <p>
-                        Мы работаем как с частными лицами, так и с организациями, владельцами клубов, отелей, кафе и ресторанов, которые хотят придать интерьеру своего заведения или офиса индивидуальности.
-                    </p>
+                <div class="wow fadeIn">
+                    <h2>Для дома и офиса</h2>
+                    <hr>
+                    <p>Мы работаем как с частными лицами, так и с организациями, владельцами клубов, отелей, кафе и ресторанов, которые хотят придать интерьеру своего заведения или офиса индивидуальности.</p>
                 </div>
+<!--                <div class="col-lg-6 callout ">
+
+                    <h3></h3>&lt;!&ndash;Для частных клиентов&ndash;&gt;
+                    <p>
+
+                    </p>
+                </div>-->
                 <!-- col-lg-6 -->
 
                 <!--<div class="col-lg-6 callout">
@@ -759,9 +764,10 @@
         <div class="col-md-4">
             <h4>Контактная информация</h4>
 
-            <p class="techfont"><span class="icon icon-home"></span> Корабельна вул., 6, Київ, 04080<br/>
-                <span class="icon icon-phone"></span>+38 044 229–63–54<br/>
-                <span class="icon icon-mobile"></span>+38 050 050–05–05<br/>
+            <p class="techfont"><span class="icon icon-home"></span>Промышленная ул., 2, Киев, 01013<br/>
+                <span class="icon icon-phone"></span>+38 044 285–55–04<br/>
+                <span class="icon icon-mobile"></span>+38 050 444–59–49<br/>
+                <span class="icon icon-phone-3" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></span>+38 050 285–55–06<br/>
             </p>
             <div class="share">
                 <a class="social social-ml" href="mailto:support@woodluck.com.ua"></a>
@@ -774,6 +780,9 @@
     <!-- row -->
 
 </div>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.7005798476916!2d30.558056315797128!3d50.390779979467204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cde3198c1c03%3A0x24e9e3a0022f83b4!2z0KHRgtC-0LvRj9GA0L3Ri9C5INC00LLQvtGAIMKr0KPQtNCw0YfQsMK7!5e0!3m2!1sru!2sua!4v1486244115631" width="100%" height="200px" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <a class="uparrow" id="uparrow">›</a>
 <!-- container -->
@@ -795,6 +804,9 @@
 <script src="assets/js/wow.min.js"></script>
 <script>
     new WOW().init();
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 </script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/retina.js"></script>
