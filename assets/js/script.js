@@ -1,4 +1,4 @@
-$('.carousel').carousel();
+$('.carousel').carousel({interval: false});
 
 // $(document).ready( function() {
 //     var clickEvent = false;
