@@ -31,11 +31,7 @@ const handleSubmit = (e) => {
     });
 }
 
-$(document).ready(function () {
-    document.getElementById("send-form").addEventListener("submit", handleSubmit);
-});
-
-$('#main-form').on('submit', (e) => {
+const handleSubmitContact = (e) => {
     e.preventDefault();
     $('#btnContactUs').addClass('btn-disabled');
     $('#btnContactUs').prop('disabled', true);
@@ -54,7 +50,12 @@ $('#main-form').on('submit', (e) => {
             });
 
     });
-})
+}
+
+$(document).ready(function () {
+    document.getElementById("send-form").addEventListener("submit", handleSubmit);
+    document.getElementById("main-form").addEventListener("submit", handleSubmitContact);
+});
 
 /* highlight the top nav as scrolling occurs */
 $('body').scrollspy({target: '#nav'});
