@@ -9,13 +9,13 @@ $('#myTab a').click(function (e) {
 });
 
 const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     $('#send').addClass('btn-disabled');
     $('#send').prop('disabled', true);
     $('.loader').show();
     $('#send > span').html("");
     let myForm = document.getElementById('send-form');
-    let formData = new FormData(myForm)
+    let formData = new FormData(myForm);
     fetch('/', {
         method: 'POST',
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
@@ -27,12 +27,10 @@ const handleSubmit = (e) => {
                 $('#send > span').html("Спасибо!");
                 $('#success').html("Мы вам скоро перезвоним.").fadeIn();
                 $('#success').delay(2000).fadeOut();
-            }).then(() => {
                 $('#send').removeClass('btn-disabled');
                 $('#send').prop('disabled', false);
-        });
-
-    })
+            });
+    });
 }
 
 $(document).ready(function () {
