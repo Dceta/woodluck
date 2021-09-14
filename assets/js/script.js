@@ -25,9 +25,13 @@ const handleSubmit = (e) => {
             .delay(2000)
             .hide(function () {
                 $('#send > span').html("Спасибо!");
-            });
-        $('#send').removeClass('btn-disabled');
-        $('#send').prop('disabled', false);
+                $('#success').html("Мы вам скоро перезвоним.").fadeIn();
+                $('#success').delay(2000).fadeOut();
+            }).then(() => {
+                $('#send').removeClass('btn-disabled');
+                $('#send').prop('disabled', false);
+        });
+
     })
 }
 
