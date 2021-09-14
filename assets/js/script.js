@@ -1,27 +1,5 @@
 $('.carousel').carousel({interval: false});
 
-// $(document).ready( function() {
-//     var clickEvent = false;
-//
-//     $('#myCarousel').on('click', '.nav a', function() {
-//         clickEvent = true;
-//         $('#myspace .nav li').removeClass('active');
-//         $(this).parent().addClass('active');
-//     }).on('slid.bs.carousel', function(e) {
-//             if(!clickEvent) {
-//                 var count = $('#myspace .nav').children().length-1;
-//                 var current = $("#myspace .nav li.active");
-//                 current.removeClass('active').next().addClass('active');
-//                 var id = parseInt(current.data('slide-to'));
-//                 console.log(count)
-//                 if(count == id) {
-//                     $('#myspace .nav li').first().addClass('active');
-//                 }
-//             }
-//             clickEvent = false;
-//         });
-// });
-
 $('.navbar-nav a').click(function() {
     $('.logo').collapse();
 });
@@ -30,37 +8,33 @@ $('#myTab a').click(function (e) {
     $(this).tab('show');
 });
 
-$(document).ready(function () {
-    $('#send').click(function (e) {
-        e.preventDefault();
-        $('#send').addClass('btn-disabled');
-        $('#send').prop('disabled', true);
-        $('.loader').show();
-        $('#send > span').html("");
-
-
-        $.post("assets/send-order.php", $("#send-form").serialize(), function (response) {
-            $('.loader').delay(2000).hide(function(){
-                $('#send > span').html("Спасибо!");
-                $('#success').html(response).fadeIn();
-                $('#success').delay(2000).fadeOut();
-            });
-
-        }).delay(2000).done(function () {
+const handleSubmit = (e) => {
+  e.preventDefault()
+  $('#send').addClass('btn-disabled');
+  $('#send').prop('disabled', true);
+  $('.loader').show();
+  $('#send > span').html("");
+  let myForm = document.getElementById('send-form');
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => {
+      $('.loader').delay(2000).hide(function(){
+                    $('#send > span').html("Спасибо!");
+                    $('#success').html(response).fadeIn();
+                    $('#success').delay(2000).fadeOut();
+                }).delay(2000).done(function () {
                 $('#send').removeClass('btn-disabled');
                 $('#send').prop('disabled', false);
-            });
-    });
+            });;
+  })
+}
+
+$(document).ready(function () {
+    document.getElementById("send-form").addEventListener("submit", handleSubmit);
 });
-
-
-
-/* affix the navbar after scroll below header */
-/*$('#nav').affix({
-    offset: {
-        top: $('header').height()+$('#nav').height()
-    }
-});*/
 
 /* highlight the top nav as scrolling occurs */
 $('body').scrollspy({ target: '#nav' });
