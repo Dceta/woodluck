@@ -12,7 +12,7 @@ const handleSubmit = (e) => {
     e.preventDefault();
     $('#send').addClass('btn-disabled');
     $('#send').prop('disabled', true);
-    $('.loader').show();
+    $('#send > .loader').show();
     $('#send > span').html("");
     let myForm = document.getElementById('send-form');
     let formData = new FormData(myForm);
@@ -21,14 +21,12 @@ const handleSubmit = (e) => {
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
         body: new URLSearchParams(formData).toString()
     }).then(() => {
-        $('.loader')
+        $('#send > .loader')
             .delay(2000)
             .hide(function () {
                 $('#send > span').html("Спасибо!");
                 $('#success').html("Мы вам скоро перезвоним.").fadeIn();
                 $('#success').delay(2000).fadeOut();
-                $('#send').removeClass('btn-disabled');
-                $('#send').prop('disabled', false);
             });
     });
 }
@@ -36,6 +34,27 @@ const handleSubmit = (e) => {
 $(document).ready(function () {
     document.getElementById("send-form").addEventListener("submit", handleSubmit);
 });
+
+$('#main-form').on('submit', (e) => {
+    e.preventDefault();
+    $('#btnContactUs').addClass('btn-disabled');
+    $('#btnContactUs').prop('disabled', true);
+    $('#btnContactUs > .loader').show();
+    let myForm = document.getElementById('main-form');
+    let formData = new FormData(myForm);
+    fetch('/', {
+        method: 'POST',
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: new URLSearchParams(formData).toString()
+    }).then(() => {
+        $('#btnContactUs > .loader')
+            .delay(2000)
+            .hide(function () {
+                $('#btnContactUs > span').html("Спасибо!");
+            });
+
+    });
+})
 
 /* highlight the top nav as scrolling occurs */
 $('body').scrollspy({target: '#nav'});
