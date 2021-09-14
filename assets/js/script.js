@@ -25,8 +25,6 @@ const handleSubmit = (e) => {
             .delay(2000)
             .hide(function () {
                 $('#send > span').html("Спасибо!");
-                $('#success').html(response).fadeIn();
-                $('#success').delay(2000).fadeOut();
             });
         $('#send').removeClass('btn-disabled');
         $('#send').prop('disabled', false);
