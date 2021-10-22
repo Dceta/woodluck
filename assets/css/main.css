@@ -1,17 +1,34 @@
-#myCarousel .nav .active a > span {
-    /*border-bottom: 2px solid rgb(255, 255, 255);*/
-    background: none repeat scroll 0% 0% transparent;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset, 0px 1px 0px rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    color: #FFF;
-    /*text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.796), 0px 0px 10px rgba(255, 255, 255, 0.298);*/
-}
+/*#myCarousel .nav .active a > span {*/
+    /*!*border-bottom: 2px solid rgb(255, 255, 255);*!*/
+    /*background: none repeat scroll 0% 0% transparent;*/
+    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset, 0px 1px 0px rgba(255, 255, 255, 0.1);*/
+    /*border-radius: 4px;*/
+    /*border: 1px solid rgba(0, 0, 0, 0.25);*/
+    /*color: #FFF;*/
+    /*!*text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.796), 0px 0px 10px rgba(255, 255, 255, 0.298);*!*/
+/*}*/
 
-#myCarousel .nav a > span {
-    padding: 5px 8px;
+/*#myCarousel .nav a > span {*/
+    /*padding: 5px 8px;*/
 
-}
+/*}*/
+
+
+/*.carousel-indicators li {*/
+    /*text-indent: 0px;*/
+/*}*/
+/*.carousel-indicators li {*/
+    /*display: inline-block;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin: 1px;*/
+    /*text-indent: -999px;*/
+    /*cursor: pointer;*/
+    /*background-color: #000\9;*/
+    /*background-color: rgba(0,0,0,0);*/
+    /*border: 1px solid #fff;*/
+    /*border-radius: 10px;*/
+/*}*/
 
 /* ==========================================================================
    Base Styles and Bootstrap Modifications
@@ -842,9 +859,9 @@ body {
     z-index: auto !important;
 }
 
-.carousel-indicators li {
-    text-indent: 0px;
-}
+/*.carousel-indicators li {*/
+    /*text-indent: 0px;*/
+/*}*/
 
 /* Declare heights because of positioning of img element */
 #myCarousel  .item {
